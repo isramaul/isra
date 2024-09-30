@@ -38,11 +38,12 @@ async function doCheck() {
         // Handle any errors silently and move on
     }
     //console.log(mnemonic);
+    await delay(0);
     
     process.stdout.write("-");
     
-    await delay(0);  // Prevent call stack overflow by adding a slight delay
-    //process.stdout.write("-");  // Log failure (wallet not created)
+     // Prevent call stack overflow by adding a slight delay
+     
     doCheck();  // Recursively call doCheck to keep generating mnemonics
 }
 
