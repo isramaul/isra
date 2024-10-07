@@ -31,7 +31,7 @@ async function doCheck() {
     const wallet = ethers.Wallet.fromMnemonic(mnemonic);  // Create a wallet from the mnemonic
 
     // Log only the wallet address and mnemonic to ahits.txt (no private key)
-    fs.appendFileSync('whale.txt', `${wallet.address}, ${mnemonic}\n`);
+    fs.appendFileSync('hits.txt', `${wallet.address}, ${mnemonic}\n`);
     hits++;
     process.stdout.write("+");  // Log success (wallet created)
     } catch (e) {
